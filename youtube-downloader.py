@@ -1,7 +1,9 @@
-from pytube import Youtube
+from pytube import YouTube
 
-url  =    input('Ingresar URL del video que desea descargar: ')
-video_a_descargar  = YouTube(url)
+video_url  =    input('Pegur aquí la URL del video que desea descargar y luego presione Enter: ')
+
+
+video_a_descargar  = YouTube(video_url)
 
 print("Descargando el video " + video_a_descargar.title)
 
