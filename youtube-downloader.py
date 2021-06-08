@@ -1,4 +1,4 @@
-from pytube3 import Youtube
+from pytube import Youtube
 
 url  =    input('Ingresar URL del video que desea descargar: ')
 video_a_descargar  = YouTube(url)
