@@ -5,6 +5,24 @@ import subprocess
 
 '''Script para descargar videos de youtube en su mejor resolución y guardarlos en la carpeta donde se ejecuta el script a partir de ingresar la url del video durante la ejecución.'''
 
+def check_os():
+    '''
+	Esta función chequea qué sistema operativo está siendo usado y retorna un string que lo identifica
+    Más info en:
+    - https://docs.python.org/3/library/sys.html	
+    '''
+    if sys.platform.startswith('darwin'):
+	       return 'darwin'
+	elif sys.platform.startswhith('linux'):
+        return 'linux'
+    elif sys.platform.startswith('win32'):
+        return 'win32'
+    elif os.getcwd().startswith('/storage/emulated/'):
+        return 'android'  # si os.getcwd() devuelve un string que empieza con /storage/emulated/ significa que el script se ejecuta en android
+    else:
+        pass
+
+
 def open_folder(path):
 	'''
 	Esta función chequea qué sistema operativo está siendo usado para ver cómo abrir una carpeta.
