@@ -20,6 +20,9 @@ def open_folder(path):
     elif sys.platform.startswith('win32'):
         print("Abriendo la carpeta " + path)
         subprocess.check_call(['explorer', path])
+    elif True:
+        #acá puedo ver si pwd empieza con /storage/emulated/0/ para saber si se ejecuta en android y guardarlo en videos
+        pass
     else:
         pass
 
